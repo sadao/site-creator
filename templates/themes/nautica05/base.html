@@ -6,21 +6,21 @@
 <head>
 
 
+  <meta name="author" content="fullahead.org - studio7designs.com" />
+  <meta name="description" content="Site Description Here" />
+  <meta name="keywords" content="keywords, here" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="googlebot" content="noarchive" />
+
+  <link rel="stylesheet" type="text/css" href="/static/themes/nautica05/css/layout.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="/static/themes/nautica05/css/html.css" media="screen, projection, tv " />
+
 <title>
     {% block title %}
       {% if title %} {{ title }} {% else %} {{ configuration.SYSTEM_TITLE }} {% endif %}
     {% endblock %}
 </title>
 
-  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-  <meta name="author" content="fullahead.org - studio7designs.com" />
-  <meta name="description" content="Site Description Here" />
-  <meta name="keywords" content="keywords, here" />
-  <meta name="robots" content="index, follow, noarchive" />
-  <meta name="googlebot" content="noarchive" />
-
-  <link rel="stylesheet" type="text/css" href="/static/themes/nautica05/css/layout.css" media="screen, projection, tv " />
-  <link rel="stylesheet" type="text/css" href="/static/themes/nautica05/css/html.css" media="screen, projection, tv " />
 
 </head>
 
@@ -37,12 +37,12 @@
     <ul>
       {% block user_header %}
 		{% if user %}
-		  {% if is_superuser %}<li><a href="{% url views.admin.index %}">Edit site</a></li>{% endif %}
+		  {% if is_superuser %}<li><a href="{% url views.admin.index %}">編集</a></li>{% endif %}
 		  {% if is_admin %}<li><a href="{% url views.admin.display_memcache_info %}">Memcache</a></li>{% endif %}
 		  <li><a href="{% if is_superuser %}/admin/edit/user/{{ user.email }}{% endif %}">{{ user.email }}</a></li>
-		  {% if sign_out %}<li><a href="{{sign_out}}">Sign out</a></li>{% endif %}
+		  {% if sign_out %}<li><a href="{{sign_out}}">サインアウト</a></li>{% endif %}
 		{% else %}
-		  {% if sign_in %}<li><a href="{{sign_in}}">Sign in</a></li>{%endif%}
+		  {% if sign_in %}<li><a href="{{sign_in}}">サインイン</a></li>{%endif%}
 		{% endif %}
 	  {% endblock %}
     </ul>
@@ -63,24 +63,26 @@
     <ul>
       <li>
         <a href="/" onfocus="blur()">
-          <span class="title ">Home</span>
-          <span class="desc">{{configuration.SYSTEM_TITLE}}</span>
+          <span class="title ">Top</span>
+          <span class="desc">札幌お弁当センターへGo!!</span>
         </a>     
 	  </li>
       <li>
-        <a href="#" onfocus="blur()">
-          <span class="title ">&nbsp;</span>
-          <span class="desc style3">&nbsp;</span>        </a>      </li>
-      <li>
-        <a href="#" onfocus="blur()">
-          <span class="title ">&nbsp;</span>
-          <span class="desc">&nbsp;</span>
+        <a href="/todays_president/" onfocus="blur()">
+          <span class="title ">今日の社長</span>
+          <span class="desc style3">毎日ツィートしてます</span>
         </a>
       </li>
       <li>
-        <a href="#" onfocus="blur()">
-          <span class="title ">&nbsp;</span>
-          <span class="desc">&nbsp;</span>
+        <a href="/q_and_a/" onfocus="blur()">
+          <span class="title ">Q&A</span>
+          <span class="desc">これを見れば疑問が氷解！</span>
+        </a>
+      </li>
+      <li>
+        <a href="/meyasu-bako/" onfocus="blur()">
+          <span class="title ">目安箱</span>
+          <span class="desc">お気軽にお問い合わせください</span>
         </a>
       </li>
     </ul>

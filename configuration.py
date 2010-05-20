@@ -34,15 +34,17 @@ FILE_CACHE_TIME = datetime.timedelta(days=1)
 
 
 # Title for the website
-SYSTEM_TITLE = 'App Engine Site Creator'
+SYSTEM_TITLE = 'Sapporo Obentou Center'
 
 # Description for the website
-SYSTEM_DESCRIPTION = 'This site was built using App Engine Site Creator'
+#SYSTEM_DESCRIPTION = 'This site was built using App Engine Site Creator'
+SYSTEM_DESCRIPTION = ''
 
 # Unique identifier from Google Analytics (ie. UA-xxxxxxx-x)
-ANALYTICS_ID = ''
+ANALYTICS_ID = 'UA-15486820-2'
 
 # Name of theme for your site, must be located in
 # 'templates/themes/{FOLDER NAME}' where your customized
 # base and page files should be located
+#SYSTEM_THEME_NAME = 'ecobusiness'
 SYSTEM_THEME_NAME = 'nautica05'
